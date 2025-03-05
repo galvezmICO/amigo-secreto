@@ -23,4 +23,21 @@ function agregarAmigo() {
     // Esto se hace llamando a la función actualizarLista, que implementaremos en el Commit 3.
     actualizarLista();
   }
+
+// Función para actualizar la lista visible de amigos en la página
+function actualizarLista() {
+    // 1. Obtener el elemento de la lista (ul) que mostrará los nombres
+    const listaAmigos = document.getElementById("listaAmigos");
+  
+    // 2. Limpiar la lista existente para evitar duplicados
+    listaAmigos.innerHTML = "";
+  
+    // 3. Recorrer el array 'amigos' y agregar cada nombre como un elemento <li>
+    for (let i = 0; i < amigos.length; i++) {
+      const li = document.createElement("li");
+      li.textContent = amigos[i];
+      listaAmigos.appendChild(li);
+    }
+  }
+  
   
